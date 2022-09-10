@@ -1,4 +1,4 @@
-package i5.las2peer.services.res;
+package i5.las2peer.services.mensa;
 
 
 import java.net.HttpURLConnection;
@@ -45,15 +45,15 @@ import java.util.Map;
  * outsourced to (imported) classes.
  *
  */
-@ServicePath("res")
+@ServicePath("mensa")
 @ManualDeployment
-public class Res extends RESTService {
+public class Mensa extends RESTService {
 
 
 
 
 
-  public Res() {
+  public Mensa() {
 	super();
     // read and set properties values
     setFieldValues();
@@ -80,52 +80,9 @@ public class Res extends RESTService {
   @Path("/")
   public static class RootResource {
 
-    private final Res service = (Res) Context.getCurrent().getService();
+    private final Mensa service = (Mensa) Context.getCurrent().getService();
 
-      /**
-   * 
-   * gettest
-   *
-   * 
-   *
-   * 
-   * @return Response 
-   * 
-   */
-  @GET
-  @Path("/test")
-  @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.TEXT_PLAIN)
-  @ApiResponses(value = {
-       @ApiResponse(code = HttpURLConnection.HTTP_CREATED, message = "res")
-  })
-  @ApiOperation(value = "gettest", notes = " ")
-  public Response gettest() {
-
-
-
-
-     
-    // service method invocations
-
-     
-
-
-
-
-    // res
-    boolean res_condition = true;
-    if(res_condition) {
-      JSONObject res = new JSONObject();
-
-      
-
-      return Response.status(HttpURLConnection.HTTP_CREATED).entity(res.toJSONString()).build();
-    }
-    return null;
-  }
-
-
+    
 
   }
 
